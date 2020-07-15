@@ -93,7 +93,7 @@ let login = prompt("Please, write your login", 'Login');
 let email = prompt("Please, write your e-mail", '*****@**');
 let password = prompt("Please, write your password", '123456');
 
-alert("Dear " + login + ", your email is " + email ", your password is " + password);
+alert("Dear " + login + ", your email is " + email + ", your password is " + password);
 
 
 <!--TASK 8-->
