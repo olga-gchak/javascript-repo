@@ -1,0 +1,202 @@
+<!--TASK 1-->
+let x = 1;
+let y = 2;
+
+let res1 = "" + x + y ; 
+console.log(res1); // "12"
+console.log(typeof res1); // "string"
+
+let res2 = !!(x) + (y + ""); 
+console.log(res2); // "true2"
+console.log(typeof res2); // "string"
+
+let res3 = !!(x) && !!(y); 
+console.log(res3); // true
+console.log(typeof res3); // "boolean"
+
+let res4 = parseFloat(Boolean(x)) + y;
+console.log(res4); // NaN
+console.log(typeof res4); // "number
+
+
+<!--TASK 2-->
+let number = prompt("Please, enter the number", 'Number');
+let num = +number;
+
+    if (Number.isInteger(num)) {
+        if ((num % 2 === 0) && num>0) {
+          console.log("Your number is even and positive");
+        } else if (num % 7 === 0) {
+          console.log("Your number is multiple of 7");
+        } else {
+          console.log("Your number is " + num);
+        }
+    } else {
+    console.log("Try again!");
+}
+
+
+<!--TASK 3-->
+let myArr = [15, "apple", true, null];
+
+alert(myArr.length);      
+
+let data = prompt("Please, enter some value", 'Value');
+myArr.push(data);
+alert(myArr[4]);
+
+myArr.shift();
+alert(myArr);
+
+
+<!--TASK 4-->
+let cities = ["Rome", "Lviv", "Warsaw"]; 
+let newArr = cities.join('*');
+alert(newArr);
+
+
+<!--TASK 5-->
+let isAdult = prompt("How old are you?", 'Years');
+let num = +isAdult;
+
+if (Number.isInteger(num)) {
+    if (num>=0 && num<=10) {
+      alert("Your are too young");
+}
+    else if (num>10 && num<18) {
+      alert("You can login with your parents' permissinon");
+}
+    else {
+      alert("WELCOME!");
+}
+  }
+else {
+    alert("error");
+  }
+
+
+  <!--TASK 6-->
+  let a = prompt("Please, enter the length of the side a", 'a');
+  if (a<=0) {
+    alert("Incorrect data");
+  }
+
+  
+  let b = prompt("Please, enter the length of the side b", 'b');
+  if (b<=0) {
+  alert("Incorrect data");
+}
+  
+  let c = prompt("Please, enter the length of the side c", 'c');
+  if (c<=0) {
+  alert("Incorrect data");
+}
+
+  let p = (+a + +b + +c)/2;
+  let result = (p*(p-a)*(p-b)*(p-c))**(1/2);
+  alert(result.toFixed(3));
+
+  if ((a**2 + b**2 === c**2) || (a**2 + c**2 === b**2) || (c**2 + b**2 === a**2)) {
+    alert("You have a right triangle");
+  } else {
+      alert("You don't have a right triangle");
+  }
+
+  
+  <!--TASK 7-->
+let date = new Date();
+let hours = date.getHours();
+
+switch(hours){
+    case 23:
+      alert("Good night!");
+      break;
+    case 1:
+      alert("Good night!");
+      break;
+    case 2:
+      alert("Good night!");
+      break;
+    case 3:
+      alert("Good night!");
+      break;
+    case 4:
+      alert("Good night!");
+      break;
+    case 5:
+      alert("Good night!");
+      break;
+    case 6:
+      alert("Good morning!");
+      break;
+    case 7:
+      alert("Good morning!");
+      break;
+    case 8:
+      alert("Good morning!");
+      break;
+    case 9:
+      alert("Good morning!");
+      break;
+    case 10:
+      alert("Good morning!");
+      break;
+    case 11:
+      alert("Good morning!");
+      break;
+    case 12:
+      alert("Good day!");
+      break;
+    case 13:
+      alert("Good day!");
+      break;
+    case 14:
+      alert("Good day!");
+      break;
+    case 15:
+      alert("Good day!");
+      break;
+    case 16:
+      alert("Good day!");
+      break;
+    case 17:
+      alert("Good day!");
+      break;
+    case 18:
+      alert("Good evening!");
+      break;
+    case 19:
+      alert("Good evening!");
+      break;
+    case 19:
+      alert("Good evening!");
+      break;
+    case 20:
+      alert("Good evening!");
+      break;
+    case 21:
+      alert("Good evening!");
+      break;
+    case 22:
+      alert("Good evening!");
+      break;
+    default:
+      alert("error");
+}
+
+
+if (hours===23 || hours<=5) {
+    alert("Good night!");
+}
+else if (hours>5 && hours<=11) {
+    alert("Good morning!");
+}
+else if (hours>11 && hours<=17) {
+    alert("Good day!");
+}
+else if (hours>17 && hours<23){
+    alert("Good evening!");
+}
+else{
+    alert("error");
+}
