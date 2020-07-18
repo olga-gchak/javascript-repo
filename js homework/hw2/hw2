@@ -107,79 +107,36 @@ else {
 let date = new Date();
 let hours = date.getHours();
 
-switch(hours){
+switch(hours){ 
     case 0:
-     alert("Good night!");
-     break;
     case 23:
-      alert("Good night!");
-      break;
     case 1:
-      alert("Good night!");
-      break;
     case 2:
-      alert("Good night!");
-      break;
     case 3:
-      alert("Good night!");
-      break;
     case 4:
-      alert("Good night!");
-      break;
     case 5:
       alert("Good night!");
       break;
     case 6:
-      alert("Good morning!");
-      break;
     case 7:
-      alert("Good morning!");
-      break;
     case 8:
-      alert("Good morning!");
-      break;
     case 9:
-      alert("Good morning!");
-      break;
     case 10:
-      alert("Good morning!");
-      break;
     case 11:
       alert("Good morning!");
       break;
     case 12:
-      alert("Good day!");
-      break;
     case 13:
-      alert("Good day!");
-      break;
     case 14:
-      alert("Good day!");
-      break;
     case 15:
-      alert("Good day!");
-      break;
     case 16:
-      alert("Good day!");
-      break;
     case 17:
       alert("Good day!");
       break;
     case 18:
-      alert("Good evening!");
-      break;
     case 19:
-      alert("Good evening!");
-      break;
-    case 19:
-      alert("Good evening!");
-      break;
     case 20:
-      alert("Good evening!");
-      break;
     case 21:
-      alert("Good evening!");
-      break;
     case 22:
       alert("Good evening!");
       break;
