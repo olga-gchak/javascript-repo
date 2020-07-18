@@ -108,6 +108,9 @@ let date = new Date();
 let hours = date.getHours();
 
 switch(hours){
+    case 0:
+     alert("Good night!");
+     break;
     case 23:
       alert("Good night!");
       break;
