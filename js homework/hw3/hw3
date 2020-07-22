@@ -1,0 +1,110 @@
+<!--TASK 1-->
+let myArr = [2, 3, 4, 5];
+let mult= 1;
+for (let i = 0; i <myArr.length; i++) {
+    mult *= myArr[i];
+}
+console.log(mult);
+
+
+//floop while
+let myArr = [2, 3, 4, 5];
+let mult= 1;
+let i = 0;
+while (i<myArr.length) {
+    mult *= myArr[i];
+    i++
+}
+console.log(mult);
+
+
+<!--TASK 2-->
+for (let i=0; i<=15; i++) {
+   if (i%2===0) {
+        console.log(i + " is even");
+    }
+    else {
+        console.log(i + " is odd")
+    }
+}
+
+
+<!--TASK 3-->
+function randArray(k) {
+    let arr = [];
+    for(let i = 0; i < k; i++) {
+        arr[i] = Math.floor(Math.random() * 500) + 1; 
+    }
+    return arr;
+}
+
+randArray(6);
+
+
+<!--TASK 4-->
+function raiseToDegree(a, b) {
+    a = prompt("Please, enter the number that you want to raise to the degree", 'number');
+    if(!Number.isInteger(parseInt(a))){
+        alert("Incorect data")
+    }
+    
+    b = prompt("Please, enter the degree", 'degree');
+    if(!Number.isInteger(parseInt(b))){
+        alert("Incorect data")
+    }
+    let result = a**b;
+        return result;
+    }
+    
+    raiseToDegree();
+
+
+<!--TASK 5-->
+function findMin() {
+    for (let i = 0; i < arguments.length; i++) {
+        return Math.min.apply(Math, arguments);;
+    }
+}
+findMin(4, 2, 3);
+
+
+<!--TASK 6-->
+function findUnique(arr) {   
+    let n = arr.length;
+    for (let i = 0; i < n-1; i++) { 
+        for (var j = i+1; j < n; j++) { 
+            if (arr[i] === arr[j]) 
+            return false; }
+     }
+    return true;
+}
+
+findUnique([1, 2, 3, 5, 3]);
+findUnique([1, 2, 3, 5, 11]);
+
+
+<!--TASK 7-->
+function lastElem (arr, num) {
+    if (num === null) {
+        return arr[arr.length - 1];
+    }
+     else{
+        return arr.slice(Math.max(arr.length - num, 0));  
+     }
+  }
+
+  console.log(lastElem([3, 4, 10, -5],2));   
+
+
+<!--TASK 8-->
+function toUpperLetter(str) {
+    let words = str.split(" ");
+    for (let i = 0; i < words.length; i++)
+    {
+        let j = words[i].charAt(0).toUpperCase();
+        words[i] = j + words[i].substring(1);
+    }
+    return words.join(" ");
+}
+
+toUpperLetter("i love java script");
