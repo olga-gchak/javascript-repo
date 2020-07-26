@@ -13,7 +13,7 @@ let mult= 1;
 let i = 0;
 while (i<myArr.length) {
     mult *= myArr[i];
-    i++
+    i++;
 }
 console.log(mult);
 
@@ -24,7 +24,7 @@ for (let i=0; i<=15; i++) {
         console.log(i + " is even");
     }
     else {
-        console.log(i + " is odd")
+        console.log(i + " is odd");
     }
 }
 
@@ -45,12 +45,12 @@ randArray(6);
 function raiseToDegree(a, b) {
     a = prompt("Please, enter the number that you want to raise to the degree", 'number');
     if(!Number.isInteger(parseInt(a))){
-        alert("Incorect data")
+        alert("Incorect data");
     }
     
     b = prompt("Please, enter the degree", 'degree');
     if(!Number.isInteger(parseInt(b))){
-        alert("Incorect data")
+        alert("Incorect data");
     }
     let result = a**b;
         return result;
@@ -62,7 +62,7 @@ function raiseToDegree(a, b) {
 <!--TASK 5-->
 function findMin() {
     for (let i = 0; i < arguments.length; i++) {
-        return Math.min.apply(Math, arguments);;
+        return Math.min.apply(Math, arguments);
     }
 }
 findMin(4, 2, 3);
@@ -74,7 +74,8 @@ function findUnique(arr) {
     for (let i = 0; i < n-1; i++) { 
         for (var j = i+1; j < n; j++) { 
             if (arr[i] === arr[j]) 
-            return false; }
+            return false; 
+            }
      }
     return true;
 }
@@ -88,7 +89,7 @@ function lastElem (arr, num) {
     if (num === null) {
         return arr[arr.length - 1];
     }
-     else{
+     else {
         return arr.slice(Math.max(arr.length - num, 0));  
      }
   }
