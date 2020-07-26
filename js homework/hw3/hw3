@@ -22,8 +22,7 @@ console.log(mult);
 for (let i=0; i<=15; i++) {
    if (i%2===0) {
         console.log(i + " is even");
-    }
-    else {
+    } else {
         console.log(i + " is odd");
     }
 }
@@ -61,7 +60,7 @@ function raiseToDegree(a, b) {
 
 <!--TASK 5-->
 function findMin() {
-    for (let i = 0; i < arguments.length; i++) {
+    for(let i = 0; i < arguments.length; i++) {
         return Math.min.apply(Math, arguments);
     }
 }
