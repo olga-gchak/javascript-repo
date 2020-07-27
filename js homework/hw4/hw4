@@ -1,0 +1,145 @@
+<!--TASK 1-->
+function testThrow(exeption) {
+    try {
+        throw exeption;
+    } catch (error) {
+        console.log("Cought: " + error);
+         }
+    }
+   
+    testThrow(5);
+    testThrow('Test');
+    testThrow(new Error('An error happened'));
+
+
+<!--TASK 2-->
+function calcRectangleArea(width, height) {
+    if (Number.isInteger(width) && Number.isInteger(height)) {
+        if (width > 0 && height > 0){
+            let rectang = width*height;
+            return rectang;
+        } else {
+            console.log("You entered negative number");
+        }
+    } else {
+        console.log("You entered not a number");
+    } 
+    }
+
+
+    try {
+        calcRectangleArea(6, "hi");   
+    } catch (exeption) {
+        console.error(exeption);
+    }
+
+<!--TASK 3-->
+function checkAge() {
+    let age = prompt("Please, enter your age");
+    if (age === '') {
+        throw new Error("The field is empty! Please enter your age!");
+    } else if (Number.isInteger(Number(age))) {
+        if (age < 14) {
+            throw new Error("You are too young!");
+        } else {
+            console.log("You can watch the movie!");
+        }
+    } else {
+        throw new Error("You enter not a number!");
+    }
+}
+
+try {
+    let result = checkAge();
+    console.log(result);
+} catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+}
+
+
+<!--TASK 4-->
+class MonthException {
+	constructor(message) {
+		this.name = "MonthException";
+    this.message = message;
+	}
+ get get_message() {
+    return this.message;
+  }
+}
+
+function showMonthName(month) {
+if (Number.isInteger(month)) {
+	if (month <= 12 && month > 0) {
+  	let arr = ["January", "Fabruary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Deсember"];
+  	let monthName = arr[month-1];
+  	return monthName;
+  } else {
+  	throw new MonthException("Incorrect month number");
+  }   
+} else {
+	throw new Error("You entered not a number!");
+}
+}
+
+try {
+    	console.log(showMonthName(-12));
+    } 
+catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+}
+
+
+<!--TASK 5-->
+function showUser(id) {
+    if(Number.isInteger(id)) {
+      if(id > 0) {
+        let obj = {};
+        obj.id = id;
+        return obj;
+      } else {
+          throw new Error("ID must not be negative: " + id);	
+      }
+    } else {
+        throw new Error("You entered not a number: " + id);
+    }
+}
+    
+    
+    try {
+        showUser(-10);
+        } 
+    catch (error) {
+        console.log(error.name);
+        console.log(error.message);
+    }
+
+    
+
+function showUsers(ids) {
+	if(Array.isArray(ids)) {
+		let objArray = [];
+        for (const id of ids) {
+    try {
+      	objArray.push(showUser(id));
+    }catch (error) {
+    		console.log(error.name);
+    		console.log(error.message);
+			}
+  	}
+    console.log(objArray);
+	} else {
+		throw new Error("Ids is not array: " + ids);
+	}
+}
+
+
+try {
+    showUsers([-10, 100, 120, 140]);
+    } 
+catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+}
