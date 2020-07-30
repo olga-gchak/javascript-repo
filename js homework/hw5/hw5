@@ -119,7 +119,7 @@ worker3.experience = 1.5;
 console.log("New experience: " + worker3.experience);
 console.log(worker3.fullName + " experience salary: " + worker3.showSalaryWithExperience());
 
-let arr = [{name:"John Johnson", salary: 690}, {name:"Tom Tomson", salary: 1584}, {name:"Andy Ander", salary: 1000.5}]
+let arr = [{name:worker1.fullName, salary:worker1.showSalaryWithExperience()}, {name:worker2.fullName, salary:worker2.showSalaryWithExperience()}, {name:worker3.fullName, salary:worker3.showSalaryWithExperience()}];
 arr.sort(function (a, b) {
   return a.salary - b.salary;
 });
