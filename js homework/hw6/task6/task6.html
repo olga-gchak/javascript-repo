@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Project </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content = "width=device-width, initial-scale=1, maximum-scale=1"/>
+</head>
+<body>
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+    <script>
+        let val1 = prompt("Please, enter your message");
+        let elem1 = document.getElementById("input1");
+        elem1.setAttribute('value', val1);
+        let val2 = prompt("Please, enter your message");
+        let elem2 = document.getElementById("input2");
+        elem2.setAttribute('value', val2);
+
+        elem1.setAttribute('value', val2);
+        elem2.setAttribute('value', val1);
+    </script>
+  </body>	
+</html>
