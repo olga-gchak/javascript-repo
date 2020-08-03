@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Project </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content = "width=device-width, initial-scale=1, maximum-scale=1"/>
+</head>
+<body>
+  
+    <script>
+        let newMain = document.createElement("main");
+        newMain.className = "mainClass check item";
+        let elem = document.body;
+        elem.append(newMain);
+        let newDiv = document.createElement("div");
+        newDiv.id = "myDiv";
+        newMain.append(newDiv);
+        let newP = document.createElement("p");
+        newP.innerHTML = "First paragraph";
+        newDiv.append(newP);
+    </script>
+</body>
+
+</html>
