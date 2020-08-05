@@ -6,13 +6,13 @@
     <title>Task 7</title>
 </head>
 <body>
-    <select name="country" id="country" onChange="select(this)";> 
+    <select name="country" id="country" onChange="select1(this)";> 
         <option value="ger">Germany</option>
         <option value="usa">USA</option>
         <option value="ukr">Ukraine</option>
     </select>                  
-    <select name="cities" id="cities" onChange="select(this)"></select>
-    <p></p>
+    <select name="cities" id="cities" onChange="select2(this)"></select>
+    <p id=rez></p>
     
     <script>
         let selectCountries = document.getElementById("country");
@@ -33,10 +33,13 @@
             }
         })
 
-        function select(sel) {
-            let newSpan = document.createElement("span");
-            newSpan.innerHTML = sel.options[sel.selectedIndex].text + " ";  
-            document.body.append(newSpan); 
+        function select1(sel) {
+            let result1 = sel.options[sel.selectedIndex].text + "<br>";  
+            document.getElementById("rez").innerHTML = "Country: " + result1;
+        }
+        function select2(sel) {
+            let result2 = sel.options[sel.selectedIndex].text;  
+            document.getElementById("rez").innerHTML += "City: " + result2;
     }
     </script>
     
