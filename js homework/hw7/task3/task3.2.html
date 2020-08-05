@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <button id="btn1" onclick="changeColor('blue')">Click to make the page blue</button>
+    <button id="btn2" ondblclick="changeColor('pink')">Click to make the page pink</button>
+    <button id="btn3" onmousedown="changeColor('brown')" onmouseup="changeColor('white')">Click to make the page brown</button>
+    <a href="URL" id="link" onmouseover="changeColor('yellow')" onmouseout="changeColor('white')"> Hover over to make the page yellow</a>
+
+<script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+ </script>
+
+</script>
+</body>
+</html>
