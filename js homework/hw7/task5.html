@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <button id="myBtn">Live button!</button>
+    
+    <script>
+        function pressed() {
+            let newP = document.createElement("p");
+            newP.innerHTML = "I was pressed!";
+            document.body.append(newP);
+        }
+        function pointed() {
+            let newP = document.createElement("p");
+            newP.innerHTML = "Mouse on me!";
+            document.body.append(newP);
+        }
+        function away() {
+            let newP = document.createElement("p");
+            newP.innerHTML = "Mouse is not on me!";
+            document.body.append(newP);
+        }
+
+        myBtn.addEventListener("click", pressed);
+        myBtn.addEventListener("mouseover", pointed);
+        myBtn.addEventListener("mouseout", away);
+    </script>
+    
+</body>
+</html>
