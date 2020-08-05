@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body>
+    <select name="country" id="country" onChange="select(this)";> 
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>                  
+    <select name="cities" id="cities" onChange="select(this)"></select>
+    <p></p>
+    
+    <script>
+        let selectCountries = document.getElementById("country");
+        let selectCities = document.getElementById("cities");
+
+        let arr = {
+            ger: ["Berlin", "Munich", "Hamburg"],
+            usa: ["New-York", "Chicago", "Los-Angeles"],
+            ukr: ["Kiev", "Lviv", "Kharkiv"],
+        }
+
+        selectCountries.addEventListener("change", function() {
+            let cities = arr[this.value];
+            selectCities.length = 0;
+
+            for (let i = 0; i < cities.length; i++) {
+                selectCities.add(new Option (cities[i]));
+            }
+        })
+
+        function select(sel) {
+            let newSpan = document.createElement("span");
+            newSpan.innerHTML = sel.options[sel.selectedIndex].text + " ";  
+            document.body.append(newSpan); 
+    }
+    </script>
+    
+</body>
+</html>
