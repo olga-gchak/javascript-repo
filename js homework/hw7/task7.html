@@ -12,7 +12,8 @@
         <option value="ukr">Ukraine</option>
     </select>                  
     <select name="cities" id="cities" onChange="select2(this)"></select>
-    <p id=rez></p>
+    <p id=rez1></p>
+    <p id=rez2></p>
     
     <script>
         let selectCountries = document.getElementById("country");
@@ -35,11 +36,11 @@
 
         function select1(sel) {
             let result1 = sel.options[sel.selectedIndex].text + "<br>";  
-            document.getElementById("rez").innerHTML = "Country: " + result1;
+            document.getElementById("rez1").innerHTML = "Country: " + result1;
         }
         function select2(sel) {
             let result2 = sel.options[sel.selectedIndex].text;  
-            document.getElementById("rez").innerHTML += "City: " + result2;
+            document.getElementById("rez2").innerHTML = "City: " + result2;
     }
     </script>
     
