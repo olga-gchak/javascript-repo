@@ -1,5 +1,5 @@
 function checkNumber(num) {
-    let regExp = /^(4\d{3})(\-\d{4}){3}$/;
+    let regExp = /^(\d{4})(\-\d{4}){3}$/;
     if (num.match(regExp)) {
         console.log ("True");
     } else {
