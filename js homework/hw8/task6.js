@@ -1,5 +1,5 @@
 function checkEmail(str) {
-    let regExp = /^[a-zA-Z0-9]+[_-]\w+\-\w+\@\w+\.[a-z]{2,4}$/i;
+    let regExp = /^[a-zA-Z0-9]+\w+\-?\w+\@\w+\.[a-z]{2,4}$/i;
     if (str.match(regExp)) {
         console.log ("Email is correct!");
     } else {
