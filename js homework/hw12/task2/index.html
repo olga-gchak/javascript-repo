@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+  
+    <button onclick="downloadBooks()" id="btn">Download books</button>
+    <ul id="list"></ul>
+
+    <script>
+        function downloadBooks() {
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "books.json", true);
+    
+        xhr.onreadystatechange = function() { 		 
+            if (xhr.readyState != 4) return;			 
+        
+            if (xhr.status != 200) {        
+    	        alert("Error " + xhr.status + ": " + xhr.statusText);
+            } else { 
+             let json = xhr.responseText;
+                let book = JSON.parse(json);
+                let but = document.getElementById("btn");
+                but.remove();
+                let result = document.getElementById("list");
+                for(let i=0; i<json.length; i++) {
+                    result.innerHTML += "<li>" + book[i].author + "</li>";
+                }
+            }
+        }
+        xhr.send();
+    }
+
+  </script>
+
+</body>
+</html>
